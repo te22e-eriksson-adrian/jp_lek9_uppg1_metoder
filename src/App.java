@@ -11,6 +11,17 @@ public class App {
 
         //C
         ritaRektangel(4, 5);
+        System.out.println("      ");
+
+        //D - 1
+        char jamforelse = tecken(5.232);
+        System.out.println("Svar: "+jamforelse);
+        System.out.println("      ");
+
+        //D - 2
+        char jamforelse2 = tecken(-3.232);
+        System.out.println("Svar: "+jamforelse2);
+        System.out.println("      ");
     }
     static double omkretsCirkel(double radie){
             double omkrets = 2*radie*3.14;
@@ -28,6 +39,15 @@ public class App {
                 System.out.print("*");
             }
             System.out.println();
+        }
+    }
+    static char tecken(double tal){
+        if (tal<0) {
+            char negativ = '-';
+            return negativ;
+        }else{
+            char positiv = '+';
+            return positiv;
         }
     }
 }
