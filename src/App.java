@@ -15,12 +15,22 @@ public class App {
 
         //D - 1
         char jamforelse = tecken(5.232);
-        System.out.println("Svar: "+jamforelse);
+        System.out.println("D1 - Svar: "+jamforelse);
         System.out.println("      ");
 
         //D - 2
         char jamforelse2 = tecken(-3.232);
-        System.out.println("Svar: "+jamforelse2);
+        System.out.println("D2 - Svar: "+jamforelse2);
+        System.out.println("      ");
+
+        //E - 1
+        boolean raknetecken = siffra('4');
+        System.out.println("Är inmatningen en siffra?: "+raknetecken);
+        System.out.println("      ");
+
+        //E - 2
+        boolean raknetecken2 = siffra('a');
+        System.out.println("Är den andra inmatningen en siffra?: "+raknetecken2);
         System.out.println("      ");
     }
     static double omkretsCirkel(double radie){
@@ -48,6 +58,14 @@ public class App {
         }else{
             char positiv = '+';
             return positiv;
+        }
+    }
+    static boolean siffra(char tecken){
+        int sifferkoll = (int) tecken;
+        if (sifferkoll>47 && sifferkoll<58) {
+            return true;
+        }else{
+            return false;
         }
     }
 }
